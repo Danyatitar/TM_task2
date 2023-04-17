@@ -41,7 +41,7 @@ function handleAdd() {
       err.classList.add("hidden");
       queue.items.push(input.value);
       queue.addIndex++;
-      addItem(input.value, queue, queue.addIndex);
+      addItem(input.value, queue.addIndex);
       localStorage.setItem("items", queue.items);
       input.value = null;
     }
@@ -76,7 +76,7 @@ function handleClear() {
   });
 }
 
-function addItem(value, queue, index) {
+function addItem(value, index) {
   const queueItem = document.createElement("p");
   queueItem.classList.add("box-item");
   queueItem.classList.add(`item-${index}`);

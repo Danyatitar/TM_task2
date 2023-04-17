@@ -65,7 +65,9 @@ function handleRemove() {
 
 function handleClear() {
   clear_btn.addEventListener("click", () => {
-    if (queue.items !== []) {
+    if (queue.items.length !== 0) {
+      console.log(1);
+
       err.classList.add("hidden");
       queue.removeIndex += queue.items.length;
       queue.items = [];

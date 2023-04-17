@@ -77,7 +77,7 @@ function handleClear() {
 }
 
 function addItem(value, queue, index) {
-  const queueItem = document.createElement("div");
+  const queueItem = document.createElement("p");
   queueItem.classList.add("box-item");
   queueItem.classList.add(`item-${index}`);
   queueItem.innerHTML = value;
